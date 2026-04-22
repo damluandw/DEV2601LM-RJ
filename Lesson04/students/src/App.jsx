@@ -47,7 +47,7 @@ function App() {
         birth: "17/03/2006",
         prov: "HN",
         adress: "Hà Nội",
-      },
+      }
     ]);
   }, []);
 
