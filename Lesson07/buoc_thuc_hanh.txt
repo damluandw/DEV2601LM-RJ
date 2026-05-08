@@ -1,0 +1,24 @@
+1. Chuyển file HTML -> JSX
+2. chuyển nội dung JSX vào trang App.jsx
+3. Copy các file liên quan (css, img, thư viện js - boostraps (gần như k dùng file js)) 
+    sau đó cập nhật các đường link vào file index.html loại bỏ các css thừa
+4. Cắt file JSX thành các component nhỏ hơn
+5. Xác định các chức năng và xử lý các chức năng:
+5.1. Hiển thị danh sách sản phẩm
+    - Lấy dữ liệu:
+        + lấy dữ liệu từ API
+        + localStogare/SessionStogare/cookie
+        + tự khai báo
+    - Render dữ liệu sản phẩm:
+        + Dữ liệu (App.jsx) -> truyền dữ liệu xuống (ListProduct) -> truyền xuống (Product)
+        + Dữ liệu truyền xuống bắt props: const {tên_biến_1, tên_biến_2,...} = props (với hook - function)
+        + Xử lý các trường hợp khi render
+        + xử lý khi tăng số lượng sản phẩm không quá quatity (xử thêm bằng cách bắt sự kiện)
+    - Xây dựng chức năng mua hàng
+        + xác định sự kiện đi từ component nào đến component nào?
+            ++ Product -> ListProduct -> App ->ListCart -> Cart/ Alert
+        + sử dụng phương thức gì để giao tiếp giữa các component?
+            ++ truyền lên: Product -> ListProduct -> App : props.on...
+            ++ truyền xuống: App ->ListCart -> Cart/ Alert :  const {tên_biến_1, tên_biến_2,...} = props (với hook - function)
+        + quản lý dữ liệu listcart dùng?? :  useState
+        
